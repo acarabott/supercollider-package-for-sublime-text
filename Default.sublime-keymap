@@ -1,11 +1,20 @@
 [
   {
+    "keys": ["super+ctrl+s","super+ctrl+s"], "command": "sc_start"
+  },
+  {
+    "keys": ["super+ctrl+s","super+ctrl+p"], "command": "sc_stop"
+  },
+  {
     "keys": ["ctrl+enter"], "command": "sc_send"
   },
   {
     "keys": ["ctrl+."], "command": "sc_stop_all_sounds"
   },
   {
-    "keys": ["ctrl+shift+,"], "command": "sc_get_help"
+    "keys": ["super+ctrl+s","super+ctrl+c"], "command": "sc_show_console"
+  },
+  {
+    "keys": ["super+ctrl+s","super+ctrl+h"], "command": "sc_search_help"
   }
 ]
