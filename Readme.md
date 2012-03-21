@@ -1,6 +1,7 @@
 # Supercollider package for Sublime Text 2
 
-Forked from geoffroymontel / supercollider-package-for-sublime-text(https://github.  com/geoffroymontel/supercollider-package-for-sublime-text)
+Forked from geoffroymontel / supercollider-package-for-sublime-text  
+https://github.  com/geoffroymontel/supercollider-package-for-sublime-text
 
 Tested on OSX Lion and SC3.5 Mainly  
 Tested on XP and SC3.5 (only a little...)
