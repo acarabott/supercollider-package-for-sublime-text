@@ -40,11 +40,13 @@ class Sc_startCommand(sublime_plugin.WindowCommand):
 			#print "Starting SuperCollider : " + sc_dir + sc_exe
 			Sc_startCommand.sclang_process = subprocess.Popen(
 				[sc_dir + sc_exe,"-i", "sublime"],
+				cwd = sc_dir,
+				#shell = True,
 				bufsize = 0,
 				stdin = subprocess.PIPE,
 				stdout = subprocess.PIPE,
 				stderr = subprocess.STDOUT,
-				close_fds = True)
+				close_fds = ON_POSIX)
 			Sc_startCommand.sclang_queue = Queue()
 			Sc_startCommand.sclang_thread = threading.Thread(target=enqueue_output, args=(Sc_startCommand.sclang_process.stdout, Sc_startCommand.sclang_queue))
 			Sc_startCommand.sclang_thread.daemon = True # thread dies with the program
