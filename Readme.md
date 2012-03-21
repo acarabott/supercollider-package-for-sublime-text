@@ -1,8 +1,9 @@
 # Supercollider package for Sublime Text 2
 
-Forked from geoffroymontel / supercollider-package-for-sublime-text(https://github.com/geoffroymontel/supercollider-package-for-sublime-text)
+Forked from geoffroymontel / supercollider-package-for-sublime-text 
+https://github.com/geoffroymontel/supercollider-package-for-sublime-text
 
-Tested on OSX Lion and SC3.5 Mainly
+Tested on OSX Lion and SC3.5 Mainly 
 Tested on XP and SC3.5 (only a little...)
 
 ## Usage
@@ -22,8 +23,9 @@ Tested on XP and SC3.5 (only a little...)
 - Open help from current word: Cmd + Ctrl + s, Cmd + Ctrl + h
 - Show console: Cmd + Ctrl + s, Cmd + Ctrl + c
 - Clear console logs: Cmd + Ctrl + s, Cmd + Ctrl + l
-
-geoffroymontel / supercollider-package-for-sublime-text
+ 
+ 
+geoffroymontel / supercollider-package-for-sublime-text 
 https://github.com/geoffroymontel/supercollider-package-for-sublime-text
 
 The syntax highlighting comes from RFWatson's SuperCollider TM Bundle  
