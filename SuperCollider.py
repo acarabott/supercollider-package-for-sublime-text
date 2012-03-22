@@ -10,8 +10,6 @@ try:
 except ImportError:
 	from queue import Queue, Empty  # python 3.x
 
-ON_POSIX = 'posix' in sys.builtin_module_names
-
 def enqueue_output(out, queue):
 	for line in iter(out.readline, b''):
 		queue.put(line)
@@ -28,7 +26,6 @@ class Sc_startCommand(sublime_plugin.WindowCommand):
 	def run(self):
 		# create output panel
 		if Sc_startCommand.output_view is None:
-			#print "Creating output view for SuperCollider"
 			Sc_startCommand.panel_name = "supercollider"
 			Sc_startCommand.output_view = self.window.get_output_panel(Sc_startCommand.panel_name)
 
@@ -37,22 +34,30 @@ class Sc_startCommand(sublime_plugin.WindowCommand):
 			settings = sublime.load_settings("SuperCollider.sublime-settings")
 			sc_dir = settings.get("sc_dir")
 			sc_exe = settings.get("sc_exe")
-			#print "Starting SuperCollider : " + sc_dir + sc_exe
-			Sc_startCommand.sclang_process = subprocess.Popen(
-				[sc_dir + sc_exe,"-i", "sublime"],
-				cwd = sc_dir,
-				#shell = True,
-				bufsize = 0,
-				stdin = subprocess.PIPE,
-				stdout = subprocess.PIPE,
-				stderr = subprocess.STDOUT,
-				close_fds = ON_POSIX)
+
+			if os.name == 'posix':
+				Sc_startCommand.sclang_process = subprocess.Popen(
+					[sc_dir + sc_exe, '-i', 'sublime'],
+					bufsize = 0,
+					stdin = subprocess.PIPE,
+					stdout = subprocess.PIPE,
+					stderr = subprocess.STDOUT,
+					close_fds = True)
+			else:
+				Sc_startCommand.sclang_process = subprocess.Popen(
+					[sc_exe, '-i', 'sublime'], 
+					cwd = sc_dir, 
+					bufsize = 0, 
+					stdin = subprocess.PIPE, 
+					stdout = subprocess.PIPE, 
+					stderr = subprocess.STDOUT,
+					shell = True)
+			
 			Sc_startCommand.sclang_queue = Queue()
 			Sc_startCommand.sclang_thread = threading.Thread(target=enqueue_output, args=(Sc_startCommand.sclang_process.stdout, Sc_startCommand.sclang_queue))
 			Sc_startCommand.sclang_thread.daemon = True # thread dies with the program
 			Sc_startCommand.sclang_thread.start()
-			#print "SuperCollider has started"
-			sublime.status_message('SuperCollider has started.')
+			sublime.status_message('Starting SuperCollider')
 
 		sublime.set_timeout(self.scrolldown, 100)
 		sublime.set_timeout(self.poll, 1000)

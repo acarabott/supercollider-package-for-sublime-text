@@ -1,7 +1,7 @@
 # Supercollider package for Sublime Text 2
 
 Forked from geoffroymontel / supercollider-package-for-sublime-text  
-https://github.  com/geoffroymontel/supercollider-package-for-sublime-text
+https://github.com/geoffroymontel/supercollider-package-for-sublime-text
 
 Tested on OSX Lion and SC3.5 Mainly  
 Tested on XP and SC3.5 (only a little...)
@@ -15,7 +15,7 @@ Tested on XP and SC3.5 (only a little...)
 - Restart Sublime Text 2
 - Tools > Supercollider > Start sclang
 
-## Keybind
+## Keybind(Mac)
 - Start SCLang: Cmd + Ctrl + s, Cmd + Ctrl + s
 - Stop SCLang: Cmd + Ctrl + s, Cmd + Ctrl + p
 - Evaluate current line: Ctrl + enter
@@ -23,6 +23,16 @@ Tested on XP and SC3.5 (only a little...)
 - Open help from current word: Cmd + Ctrl + s, Cmd + Ctrl + h
 - Show console: Cmd + Ctrl + s, Cmd + Ctrl + c
 - Clear console logs: Cmd + Ctrl + s, Cmd + Ctrl + l
+
+## Keybind(Windows/Linux)
+- Start SCLang: Ctrl + Alt + s, Ctrl + Alt + s
+- Stop SCLang: Ctrl + Alt + s, Ctrl + Alt + s
+- Evaluate current line: Ctrl + enter
+- Stop all sound(thisProcess.stop;): Ctrl + .
+- Open help from current word: Ctrl + Alt + s, Ctrl + Alt + h
+- Show console: Ctrl + Alt + s, Ctrl + Alt + c
+- Clear console logs: Ctrl + Alt + s, Ctrl + Alt + l
+
 
 geoffroymontel / supercollider-package-for-sublime-text  
 https://github.com/geoffroymontel/supercollider-package-for-sublime-text
