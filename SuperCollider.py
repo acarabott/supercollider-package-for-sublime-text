@@ -104,21 +104,30 @@ class Sc_stopCommand(sublime_plugin.WindowCommand):
 
 # command to send the current line to sclang
 class Sc_sendCommand(sublime_plugin.WindowCommand):
-	def run(self):
+	def run(self, expand):
 		if Sc_startCommand.sclang_thread is not None and Sc_startCommand.sclang_thread.isAlive():
 			view = self.window.active_view()
 			sel = view.sel()
 			point = sel[0]
 			line = view.line(point)
 			line_str = view.substr(line)
-			if line_str[0] == '(' or line_str[0] == ')':
+			expand = expand == 'True'
+
+			if expand:
 				view.run_command("expand_selection", {"to": "brackets"})
-			sel = view.sel()
+				orig = point
+				sel = view.sel()
+
 			region = view.line(sel[0])
 			lines = view.substr(region)
+
 			Sc_startCommand.sclang_process.stdin.write(bytes(lines))
 			Sc_startCommand.sclang_process.stdin.write(bytes("\x0c"))
 			Sc_startCommand.sclang_process.stdin.flush()
+
+			if expand:
+				view.sel().clear()
+				view.sel().add(sublime.Region(orig.a, orig.b))
 
 # command to show the supercollider console
 class Sc_show_consoleCommand(sublime_plugin.WindowCommand):

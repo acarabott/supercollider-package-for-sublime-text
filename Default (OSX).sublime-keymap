@@ -20,13 +20,15 @@
         "context": [{"key": "selector", "operator": "equal", "operand": "source.supercollider" }]
     },
     {
-        "keys": ["keypad_enter"],
+        "keys": ["shift+enter"],
         "command": "sc_send",
+        "args": {"expand": "False"},
         "context": [{"key": "selector", "operator": "equal", "operand": "source.supercollider" }]
     },
     {
-        "keys": ["shift+enter"],
+        "keys": ["super+enter"],
         "command": "sc_send",
+        "args": {"expand": "True"},
         "context": [{"key": "selector", "operator": "equal", "operand": "source.supercollider" }]
     },
     {
