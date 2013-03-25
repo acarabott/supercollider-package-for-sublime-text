@@ -12,6 +12,7 @@
             { "command": "sc_stop", "caption": "Stop sclang", "mnemonic": "o" },
             { "caption": "-" },
             { "command": "sc_server_boot", "caption": "Boot Default Server", "mnemonic": "b"},
+            { "command": "sc_server_reboot", "caption": "Reboot Default Server"},
             { "command": "sc_stop_all_sounds", "caption": "Stop all sounds", "mnemonic": "s" },
             { "command": "sc_server_gui", "caption": "Show GUI for default server", "mnemonic": "g" },
             { "caption": "-" },
