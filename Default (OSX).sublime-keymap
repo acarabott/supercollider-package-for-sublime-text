@@ -40,7 +40,7 @@
         "context": [{"key": "selector", "operator": "equal", "operand": "source.supercollider" }]
     },
     {
-        "keys": ["super+shift+p"],
+        "keys": ["super+shift+c"],
         "command": "sc_clear_console",
         "context": [{"key": "selector", "operator": "equal", "operand": "source.supercollider" }]
     },
