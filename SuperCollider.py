@@ -178,3 +178,9 @@ class Sc_search_helpCommand(sublime_plugin.WindowCommand):
 			Sc_startCommand.sclang_process.stdin.write(bytes("HelpBrowser.openHelpFor(\"" + view.substr(word) + "\");\x0c"))
 			Sc_startCommand.sclang_process.stdin.flush()
 
+# boot default server
+class Sc_server_bootCommand(sublime_plugin.WindowCommand):
+	def run(self):
+		if Sc_startCommand.sclang_thread is not None and Sc_startCommand.sclang_thread.isAlive():
+			Sc_startCommand.sclang_process.stdin.write(bytes("Server.default.boot;\x0c"))
+			Sc_startCommand.sclang_process.stdin.flush()
