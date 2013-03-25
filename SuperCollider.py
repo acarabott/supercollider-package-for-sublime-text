@@ -59,8 +59,8 @@ class Sc_startCommand(sublime_plugin.WindowCommand):
 			Sc_startCommand.sclang_thread.start()
 			sublime.status_message('Starting SuperCollider')
 
-		sublime.set_timeout(self.scrolldown, 100)
-		sublime.set_timeout(self.poll, 1000)
+		sublime.set_timeout(self.scrolldown, 50)
+		sublime.set_timeout(self.poll, 50)
 
 	def poll(self):
 		# continue while sclang is running
@@ -83,9 +83,9 @@ class Sc_startCommand(sublime_plugin.WindowCommand):
 			Sc_startCommand.output_view.end_edit(edit)
 
 			if somethingHappened :
-				sublime.set_timeout(self.scrolldown, 100)
+				sublime.set_timeout(self.scrolldown, 50)
 
-			sublime.set_timeout(self.poll, 500)
+			sublime.set_timeout(self.poll, 50)
 
 	def scrolldown(self):
 		if Sc_startCommand.output_view is not None:
