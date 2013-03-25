@@ -15,6 +15,11 @@
         "context": [{"key": "selector", "operator": "equal", "operand": "source.supercollider" }]
     },
     {
+        "keys": ["ctrl+s","ctrl+b"],
+        "command": "sc_server_reboot",
+        "context": [{"key": "selector", "operator": "equal", "operand": "source.supercollider" }]
+    },
+    {
         "keys": ["keypad_enter"],
         "command": "sc_send",
         "context": [{"key": "selector", "operator": "equal", "operand": "source.supercollider" }]
