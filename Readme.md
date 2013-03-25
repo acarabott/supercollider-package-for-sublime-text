@@ -45,3 +45,14 @@ http://www.sublimetext.com/2
 
 Supercollider  
 http://supercollider.sourceforge.net 
+
+## TODO
+	* Recompile class library command / key map
+	* Dump Node Tree Command / key map
+	* Server Meter Command / key map
+	* Evaluate multiple lines
+	* Cursor position after executing bracketed block
+	* Open class file command
+	* Autocomplete
+	* Argument hinting
+	* Import snippets
