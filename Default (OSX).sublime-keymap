@@ -10,6 +10,11 @@
         "context": [{"key": "selector", "operator": "equal", "operand": "source.supercollider" }]
     },
     {
+        "keys": ["super+b"],
+        "command": "sc_server_boot",
+        "context": [{"key": "selector", "operator": "equal", "operand": "source.supercollider" }]
+    },
+    {
         "keys": ["keypad_enter"],
         "command": "sc_send",
         "context": [{"key": "selector", "operator": "equal", "operand": "source.supercollider" }]
