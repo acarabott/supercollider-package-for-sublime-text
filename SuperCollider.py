@@ -45,14 +45,14 @@ class Sc_startCommand(sublime_plugin.WindowCommand):
 					close_fds = True)
 			else:
 				Sc_startCommand.sclang_process = subprocess.Popen(
-					[sc_exe, '-i', 'sublime'], 
-					cwd = sc_dir, 
-					bufsize = 0, 
-					stdin = subprocess.PIPE, 
-					stdout = subprocess.PIPE, 
+					[sc_exe, '-i', 'sublime'],
+					cwd = sc_dir,
+					bufsize = 0,
+					stdin = subprocess.PIPE,
+					stdout = subprocess.PIPE,
 					stderr = subprocess.STDOUT,
 					shell = True)
-			
+
 			Sc_startCommand.sclang_queue = Queue()
 			Sc_startCommand.sclang_thread = threading.Thread(target=enqueue_output, args=(Sc_startCommand.sclang_process.stdout, Sc_startCommand.sclang_queue))
 			Sc_startCommand.sclang_thread.daemon = True # thread dies with the program
@@ -75,7 +75,7 @@ class Sc_startCommand(sublime_plugin.WindowCommand):
 				except Empty:
 					scReturnedSomething = False
 				else:
-					somethingHappened = True 
+					somethingHappened = True
 					try: Sc_startCommand.output_view.insert(edit, Sc_startCommand.output_view.size(), line.encode(sys.getfilesystemencoding()))
 					except UnicodeDecodeError:
 						print "Encoding error..."
