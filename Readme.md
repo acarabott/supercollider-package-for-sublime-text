@@ -50,9 +50,24 @@ http://supercollider.sourceforge.net
 * Recompile class library command / key map
 * Dump Node Tree Command / key map
 * Server Meter Command / key map
-* Evaluate multiple lines
-* Cursor position after executing bracketed block
 * Open class file command
 * Autocomplete
 * Argument hinting
 * Import snippets
+
+## Changes
+
+* Key commands now only within SuperCollider syntax context
+* Key commands brought in line with SC IDE
+	* cmd+b - boot default server
+	* ctrl+s ctrl+d for Documentation (help)
+	* cmd+shift+c for clear post window (old skool SC.app style, cmd+shift+p is used in ST)
+	* shift+enter for line evaluation
+	* cmd+enter for line/region evaluation
+* Changes to key commands
+	* ctrl+s ctrl+s to start sclang
+	* ctrl+s ctrl+t to stop sclang
+* New commands
+	* Server Reboot - ctrl+s, ctrl+b
+* Evaluating multiple lines when in between brackets
+	* Cursor returns to original position
