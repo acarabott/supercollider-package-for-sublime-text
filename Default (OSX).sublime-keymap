@@ -50,5 +50,10 @@
         "keys": ["ctrl+s","ctrl+d"],
         "command": "sc_search_help",
         "context": [{"key": "selector", "operator": "equal", "operand": "source.supercollider" }]
+    },
+    {
+        "keys": ["ctrl+s","ctrl+l"],
+        "command": "sc_recompile",
+        "context": [{"key": "selector", "operator": "equal", "operand": "source.supercollider" }]
     }
 ]
