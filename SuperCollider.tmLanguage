@@ -46,7 +46,7 @@
       <key>end</key>
       <string>'</string>
       <key>name</key>
-      <string>entity.name.symbol.supercollider</string>
+      <string>constant.other.symbol.supercollider</string>
       <key>patterns</key>
       <array>
         <dict>
@@ -109,7 +109,7 @@
       <key>match</key>
       <string>\\[a-zA-Z0-9\_]+</string>
       <key>name</key>
-      <string>entity.name.symbol.supercollider</string>
+      <string>constant.other.symbol.supercollider</string>
     </dict>
     <dict>
       <key>captures</key>
