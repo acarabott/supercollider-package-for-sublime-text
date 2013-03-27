@@ -109,16 +109,20 @@ class Sc_sendCommand(sublime_plugin.WindowCommand):
 			view = self.window.active_view()
 			sel = view.sel()
 			point = sel[0]
-			line = view.line(point)
-			line_str = view.substr(line)
-			expand = expand == 'True'
 
-			if expand:
-				view.run_command("expand_selection", {"to": "brackets"})
-				orig = point
-				sel = view.sel()
+			if point.a == point.b:
+				line = view.line(point)
+				line_str = view.substr(line)
+				expand = expand == 'True'
 
-			region = view.line(sel[0])
+				if expand:
+					view.run_command("expand_selection", {"to": "brackets"})
+					sel = view.sel()
+
+				region = view.line(sel[0])
+			else:
+				region = sel[0]
+
 			lines = view.substr(region)
 
 			Sc_startCommand.sclang_process.stdin.write(bytes(lines))
@@ -127,7 +131,7 @@ class Sc_sendCommand(sublime_plugin.WindowCommand):
 
 			if expand:
 				view.sel().clear()
-				view.sel().add(sublime.Region(orig.a, orig.b))
+				view.sel().add(sublime.Region(point.a, point.b))
 
 # command to show the supercollider console
 class Sc_show_consoleCommand(sublime_plugin.WindowCommand):
