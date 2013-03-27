@@ -26,7 +26,7 @@
         "context": [{"key": "selector", "operator": "equal", "operand": "source.supercollider" }]
     },
     {
-        "keys": ["super+enter"],
+        "keys": ["ctrl+enter"],
         "command": "sc_send",
         "args": {"expand": "True"},
         "context": [{"key": "selector", "operator": "equal", "operand": "source.supercollider" }]
