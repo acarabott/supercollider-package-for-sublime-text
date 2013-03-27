@@ -116,7 +116,8 @@ class Sc_sendCommand(sublime_plugin.WindowCommand):
 				expand = expand == 'True'
 
 				if expand:
-					view.run_command("expand_selection", {"to": "brackets"})
+					for _ in range(1000): # hacky, but it works. No way to check if at outermost brackets
+						view.run_command("expand_selection", {"to": "brackets"})
 					sel = view.sel()
 
 				region = view.line(sel[0])
