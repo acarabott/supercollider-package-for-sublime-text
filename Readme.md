@@ -48,9 +48,7 @@ http://supercollider.sourceforge.net
 
 
 ## Bugs
-* Creating a new document doesn't allow sc to start
-	* Works on first document of boot
-	* Works if the plugin SuperCollider.py is saved (and thus reloaded)
+* Console not always showing 
 
 ## TODO
 * Recompile class library command / key map
@@ -78,3 +76,4 @@ http://supercollider.sourceforge.net
 	* Server Reboot - ctrl+s, ctrl+b
 * Evaluating multiple lines when in between brackets
 	* Cursor returns to original position
+* Evaluating just currently selected text
