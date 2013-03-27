@@ -51,13 +51,12 @@ http://supercollider.sourceforge.net
 * Console not always showing 
 
 ## TODO
-* Recompile class library command / key map
+* Convert snippets to .sublime-snippet
 * Dump Node Tree Command / key map
 * Server Meter Command / key map
 * Open class file command
-* Autocomplete
+* Autocomplete 
 * Argument hinting
-* Import snippets
 * Enable/Disable post window scrolling
 
 ## Changes
