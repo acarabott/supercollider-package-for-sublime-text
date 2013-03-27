@@ -46,6 +46,12 @@ http://www.sublimetext.com/2
 Supercollider  
 http://supercollider.sourceforge.net 
 
+
+## Bugs
+* Creating a new document doesn't allow sc to start
+	* Works on first document of boot
+	* Works if the plugin SuperCollider.py is saved (and thus reloaded)
+
 ## TODO
 * Recompile class library command / key map
 * Dump Node Tree Command / key map
@@ -54,6 +60,7 @@ http://supercollider.sourceforge.net
 * Autocomplete
 * Argument hinting
 * Import snippets
+* Enable/Disable post window scrolling
 
 ## Changes
 
