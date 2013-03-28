@@ -188,7 +188,6 @@ class Sc_search_helpCommand(sublime_plugin.WindowCommand):
 			sel = view.sel()
 			point = sel[0]
 			word = view.word(point)
-			print word
 			Sc_startCommand.sclang_process.stdin.write(bytes("HelpBrowser.openHelpFor(\"" + view.substr(word) + "\");\x0c"))
 			Sc_startCommand.sclang_process.stdin.flush()
 
