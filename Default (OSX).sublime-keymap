@@ -32,6 +32,12 @@
         "context": [{"key": "selector", "operator": "equal", "operand": "source.supercollider" }]
     },
     {
+        "keys": ["keypad_enter"],
+        "command": "sc_send",
+        "args": {"expand": "True"},
+        "context": [{"key": "selector", "operator": "equal", "operand": "source.supercollider" }]
+    },
+    {
         "keys": ["ctrl+."],
         "command": "sc_stop_all_sounds",
         "context": [{"key": "selector", "operator": "equal", "operand": "source.supercollider" }]
