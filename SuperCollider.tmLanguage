@@ -88,8 +88,10 @@
       <string>^([A-Z_]{1}[a-zA-Z0-9_]*)[^a-zA-Z0-9_]</string>
     </dict>
     <dict>
-      <key>match</key>
-      <string>\|[a-zA-Z0-9\#\[\]\"\_\=\.\(\)[[:space:]]\,]+\|</string>
+      <key>begin</key>
+      <string>\|</string>
+      <key>end</key>
+      <string>\|</string>
       <key>name</key>
       <string>variable.parameter.function.supercollider</string>
     </dict>
