@@ -22,7 +22,9 @@
             { "caption": "-" },
             { "command": "sc_show_console", "caption": "Show console", "mnemonic": "c" },
             { "command": "sc_hide_console", "caption": "Hide console", "mnemonic": "i" },
-            { "command": "sc_clear_console", "caption": "Clear console log", "mnemonic": "l" }
+            { "command": "sc_clear_console", "caption": "Clear console log", "mnemonic": "l" },
+            { "command": "sc_open_class_file", "caption": "Open Class File", "mnemonic": "f" }
+
         ]
     }
   ]

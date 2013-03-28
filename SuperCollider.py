@@ -204,3 +204,15 @@ class Sc_server_rebootCommand(sublime_plugin.WindowCommand):
 		if Sc_startCommand.sclang_thread is not None and Sc_startCommand.sclang_thread.isAlive():
 			Sc_startCommand.sclang_process.stdin.write(bytes("Server.default.reboot;\x0c"))
 			Sc_startCommand.sclang_process.stdin.flush()
+# open class file
+class Sc_open_class_fileCommand(sublime_plugin.WindowCommand):
+	def run(self):
+		if Sc_startCommand.sclang_thread is not None and Sc_startCommand.sclang_thread.isAlive():
+			view = self.window.active_view()
+			sel = view.sel()
+			point = sel[0]
+			word = view.word(point)
+			word_str = view.substr(word)
+
+			Sc_startCommand.sclang_process.stdin.write(bytes("(\"subl\" + " + word_str + ".filenameSymbol.asString.escapeChar($ )).unixCmd;\x0c"))
+			Sc_startCommand.sclang_process.stdin.flush()
