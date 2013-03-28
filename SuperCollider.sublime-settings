@@ -10,5 +10,6 @@
     // http://doc.sccode.org/Search.html#
     // or
     // http://sccode.org/search?q=
-    "sccode_search_url": "http://doc.sccode.org/Search.html#"
+    "sccode_search_url": "http://doc.sccode.org/Search.html#",
+    "word_separators": "./\\()\"'-:,.;<>!@#$%^&*|+=[]{}`?"
 }
