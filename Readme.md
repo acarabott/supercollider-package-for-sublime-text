@@ -51,10 +51,12 @@ http://supercollider.sourceforge.net
 * Console not always showing 
 
 ## TODO
+* make sure all commands are in menu
+* Maintain focus on ST2 when executing GUI code?
+* Consider using separate window for output, can't search terminal
 * Convert snippets to .sublime-snippet
 * Dump Node Tree Command / key map
 * Server Meter Command / key map
-* Open class file command
 * Autocomplete 
 * Argument hinting
 * Enable/Disable post window scrolling
@@ -76,3 +78,6 @@ http://supercollider.sourceforge.net
 * Evaluating multiple lines when in between brackets
 	* Cursor returns to original position
 * Evaluating just currently selected text
+* Simplified parameter syntax matching
+	* Pro: New lines work
+	* Con: No hinting for invalid values
