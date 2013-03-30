@@ -104,6 +104,7 @@ class Sc_startCommand(sublime_plugin.WindowCommand):
         Sc_startCommand.output_view = self.window.new_file()
         Sc_startCommand.output_view.set_scratch(True)
         Sc_startCommand.output_view.set_name(Sc_startCommand.panel_name)
+        Sc_startCommand.output_view.settings().set('rulers', 0)
 
     def increment_if_greater_or_equal(self, x, threshold):
         if x >= threshold:
