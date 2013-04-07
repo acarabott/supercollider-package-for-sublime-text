@@ -19,6 +19,15 @@
         "command": "sc_server_reboot",
         "context": [{"key": "selector", "operator": "equal", "operand": "source.supercollider" }]
     },
+    { "keys": ["shift+enter"],
+        "command": "sc_send",
+        "args": {"expand": "False"},
+        "context": [
+            {"key": "setting.command_mode"},
+            {"key": "selector", "operator": "equal", "operand": "source.supercollider" }
+
+        ]
+    },
     {
         "keys": ["shift+enter"],
         "command": "sc_send",

@@ -47,10 +47,12 @@ Supercollider
 http://supercollider.sourceforge.net 
 
 
-## Bugs
-* Console not always showing 
-
 ## TODO
+* Flaggable scrolling on / off of post window
+* Need to restart ST if sclang crashes, because variables are not None
+* Class(Class) doesn't recognise inner class, e.g. FFT(LocalBuf)
+* ST bracket expansion expands (to here)(from here) if there is no return or semi colon
+* Find all implementations of
 * make sure all commands are in menu
 * Maintain focus on ST2 when executing GUI code?
 * Consider using separate window for output, can't search terminal
@@ -60,6 +62,9 @@ http://supercollider.sourceforge.net
 * Autocomplete 
 * Argument hinting
 * Enable/Disable post window scrolling
+* "variable: ".post; variable.postln; snippet
+* use sclang_process.communicate rather than stdin.write http://docs.python.org/2/library/subprocess.html#subprocess.Popen.stdin
+* could open_class_command be done with .communicate rather than .unixCmd, safer?
 
 ## Changes
 
