@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.makeBundle(${1:0.2}, {
+	<string>makeBundle(${1:0.2}, {
 	$2
 });</string>
 	<key>name</key>
@@ -11,7 +11,7 @@
 	<key>scope</key>
 	<string>source.supercollider</string>
 	<key>tabTrigger</key>
-	<string>.mb</string>
+	<string>mb</string>
 	<key>uuid</key>
 	<string>66B16E22-D3FB-464F-B820-2FEEFD79DBA5</string>
 </dict>

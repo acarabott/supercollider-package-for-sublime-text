@@ -123,7 +123,7 @@
         </dict>
       </dict>
       <key>match</key>
-      <string>^\s*(\**[a-z]{1}[a-zA-Z0-9_]+)\s*\{</string>
+      <string>^\s*(\**[a-z]{1}[a-zA-Z0-9_]*)\s*\{</string>
     </dict>
     <dict>
       <key>match</key>

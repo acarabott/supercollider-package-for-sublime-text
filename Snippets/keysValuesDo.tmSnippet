@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>keysValuesDo { |${1:key}, ${2:value}|
+	<string>keysValuesDo { |${1:key}, ${0:value}|
 	$3
 };</string>
 	<key>name</key>

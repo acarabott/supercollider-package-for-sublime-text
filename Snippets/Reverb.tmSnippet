@@ -5,9 +5,11 @@
 	<key>content</key>
 	<string>var sig, verb, mix;
 
-sig = SoundIn.ar(${1:0});
+sig = In.ar(${1:0}, 1);
 verb = FreeVerb.ar(sig, 1, 0.85, 0.5);
 mix = Mix([sig, verb]);
+
+mix
 </string>
 	<key>name</key>
 	<string>Reverb</string>

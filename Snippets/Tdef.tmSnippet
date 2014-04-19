@@ -5,10 +5,10 @@
 	<key>content</key>
 	<string>Tdef(\\${1:foo}, {
 	${2:inf}.do {|i|
-		$3
+		$0
 		0.5.wait;
 	}
-}).play(${4:quant:Quant(${5:1})});</string>
+}).play(quant:Quant(1));</string>
 	<key>name</key>
 	<string>Tdef</string>
 	<key>scope</key>

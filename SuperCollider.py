@@ -182,10 +182,11 @@ class Sc_sendCommand(sublime_plugin.WindowCommand):
             sel = view.sel()
             point = sel[0]
 
-            if point.a == point.b:
+            expand = expand == 'True'
+
+            if point.a == point.b or expand:
                 line = view.line(point)
                 line_str = view.substr(line)
-                expand = expand == 'True'
 
                 if expand:
                     for _ in range(1000): # hacky, but it works. No way to check if at outermost brackets

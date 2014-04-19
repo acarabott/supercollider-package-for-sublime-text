@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.openCodeFile</string>
+	<string>openCodeFile</string>
 	<key>name</key>
-	<string>.openCodeFile</string>
+	<string>openCodeFile</string>
 	<key>scope</key>
 	<string>source.supercollider</string>
 	<key>tabTrigger</key>
-	<string>.c</string>
+	<string>c</string>
 	<key>uuid</key>
 	<string>2635D12B-F4B6-45B6-8BA4-B50215737165</string>
 </dict>

@@ -21,7 +21,7 @@
     },
     { "keys": ["shift+enter"],
         "command": "sc_send",
-        "args": {"expand": "False"},
+        "args": {"expand": "True"},
         "context": [
             {"key": "setting.command_mode"},
             {"key": "selector", "operator": "equal", "operand": "source.supercollider" }
@@ -31,13 +31,13 @@
     {
         "keys": ["shift+enter"],
         "command": "sc_send",
-        "args": {"expand": "False"},
+        "args": {"expand": "True"},
         "context": [{"key": "selector", "operator": "equal", "operand": "source.supercollider" }]
     },
     {
         "keys": ["ctrl+enter"],
         "command": "sc_send",
-        "args": {"expand": "True"},
+        "args": {"expand": "False"},
         "context": [{"key": "selector", "operator": "equal", "operand": "source.supercollider" }]
     },
     {

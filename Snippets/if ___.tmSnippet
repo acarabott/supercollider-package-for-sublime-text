@@ -6,7 +6,7 @@
 	<string>if(${1:condition}) {
 	${2:true}
 } {
-	${3:false}
+	${0:false}
 };</string>
 	<key>name</key>
 	<string>ife ...</string>

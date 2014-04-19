@@ -48,6 +48,10 @@ http://supercollider.sourceforge.net
 
 
 ## TODO
+* Clicking error message with "line xxx" takes you to that line in file.
+* Open class file should go to symbols
+* Quit server on quitting ST2
+* Help command without selection should just open Help main page
 * Flaggable scrolling on / off of post window
 * Need to restart ST if sclang crashes, because variables are not None
 * Class(Class) doesn't recognise inner class, e.g. FFT(LocalBuf)
